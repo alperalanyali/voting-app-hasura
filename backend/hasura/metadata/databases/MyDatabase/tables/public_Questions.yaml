@@ -1,0 +1,11 @@
+table:
+  name: Questions
+  schema: public
+array_relationships:
+  - name: Questions_Options
+    using:
+      foreign_key_constraint_on:
+        column: question_id
+        table:
+          name: Options
+          schema: public

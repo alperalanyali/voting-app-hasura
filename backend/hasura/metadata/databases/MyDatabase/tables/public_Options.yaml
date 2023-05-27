@@ -1,0 +1,15 @@
+table:
+  name: Options
+  schema: public
+object_relationships:
+  - name: Options_Question
+    using:
+      foreign_key_constraint_on: question_id
+array_relationships:
+  - name: Options_Votes
+    using:
+      foreign_key_constraint_on:
+        column: option_id
+        table:
+          name: Votes
+          schema: public

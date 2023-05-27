@@ -1,0 +1,1 @@
+CREATE TABLE "public"."Votes" ("id" serial NOT NULL, "option_id" integer NOT NULL, PRIMARY KEY ("id") , FOREIGN KEY ("option_id") REFERENCES "public"."Options"("id") ON UPDATE restrict ON DELETE cascade);
